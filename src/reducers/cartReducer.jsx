@@ -1,14 +1,14 @@
 let initialState = {
-    event: {}
+    product: {}
 }
-    
+
 export const cartReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'SET_CART':
             return {
-                event: action.payload
+                product: action.payload
             }
         default:
-            return state;    
+            return state;
     }
 }

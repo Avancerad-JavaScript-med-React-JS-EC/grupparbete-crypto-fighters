@@ -1,15 +1,15 @@
 let initialState = {
-    event: {}
+    order: {}
 }
-    
+
 export const orderReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'SET_ORDER':
             return {
-                event: action.payload
+                order: action.payload
             }
         default:
-            return state;    
+            return state;
     }
 }
 
