@@ -1,6 +1,6 @@
 const addToCart = (product) => {
     return {
-        type: 'SET_CART',
+        type: 'ADD_TO_CART',
         payload: product
     }
 }

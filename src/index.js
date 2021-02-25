@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from "redux-thunk";
 import reportWebVitals from './reportWebVitals';
 
 import './index.css';
@@ -10,15 +11,16 @@ import './index.css';
 import App from './App';
 import {cartReducer} from './reducers/cartReducer';
 import {orderReducer} from './reducers/orderReducer';
+import {productsReducer} from './reducers/productsReducer';
+
 
 const reducer = combineReducers({
   'cart': cartReducer,
   'order': orderReducer,
+  'productsItems': productsReducer
 })
 
-const store = createStore(
-  reducer,
-)
+const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <React.StrictMode>
