@@ -9,17 +9,21 @@ import Nav from './components/Nav';
 import Start from './components/Start';
 import Status from './components/Status';
 
+
 function App() {
   return (
-    <Switch>
-      <Route path="/" component={ Start } exact />
-      <Route path="/about" component={ About } />
-      <Route path="/cart" component={ Cart } />
-      <Route path="/menu" component={ Menu } />
-      <Route path="/nav" component={ Nav} />
-      <Route path="/status" component={ Status } /> 
-
-    </Switch>
+    <div className="App">
+      <div className="wrapper">
+        <Switch>
+          <Route path="/" component={ Start } exact />
+          <Route path="/about" component={ About } />
+          <Route path="/cart" component={ Cart } />
+          <Route path="/menu" component={ Menu } />
+          <Route path="/nav" component={ Nav} />
+          <Route path="/status" component={ Status } /> 
+        </Switch>
+      </div>
+    </div>
   )
     
 }

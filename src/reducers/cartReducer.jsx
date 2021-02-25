@@ -1,14 +1,13 @@
-let initialState = {
-    product: {}
-}
-
-export const cartReducer = (state = initialState, action) => {
+export const cartReducer = (state =  [], action) => {
     switch (action.type) {
-        case 'SET_CART':
+        case 'ADD_TO_CART':
             return {
+                ...state,
                 product: action.payload
             }
         default:
             return state;
     }
 }
+
+

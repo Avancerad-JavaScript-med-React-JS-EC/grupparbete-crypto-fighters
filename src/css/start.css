@@ -21,3 +21,8 @@
   position: absolute;
   left: 230px;
 }
+
+.loader{
+  display: flex;
+  margin: 0 auto;
+}

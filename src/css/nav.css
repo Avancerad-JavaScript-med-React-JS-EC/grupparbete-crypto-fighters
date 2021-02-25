@@ -1,0 +1,19 @@
+.nav{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.navIcon{
+    background: url("../assets/graphics/navicon.svg") no-repeat;
+    height: 20px;
+    width: 26px;
+    margin: 0 auto;
+}
