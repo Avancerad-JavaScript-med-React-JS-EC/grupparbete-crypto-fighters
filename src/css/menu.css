@@ -11,7 +11,7 @@ height: 100%;
     content: "";
     background: top no-repeat url("../assets/graphics/graphics-header.svg");
     height: 113px;
-    width: 360px;
+    width: 375px;
     position: absolute;
     top: 0;
    }
@@ -20,7 +20,7 @@ height: 100%;
     content: "";
     background: bottom no-repeat url("../assets/graphics/graphics-footer.svg");
     height: 113px;
-    width: 360px;
+    width: 375px;
     position: absolute;
     bottom: 0;
    }

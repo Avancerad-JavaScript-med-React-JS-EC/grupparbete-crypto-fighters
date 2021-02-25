@@ -1,10 +1,10 @@
 import React from "react";
 
-const Product = ({ product }) => {
+const Product = ({product, addToCartClick}) => {
  
   return (
     <div className="product-grid">
-      <button>+</button>
+      <button onClick={addToCartClick}>+</button>
       <div className="g-center">
       <h3 className="title g-left"> {product.title} </h3>
       <p className="desc"> {product.desc} </p>
