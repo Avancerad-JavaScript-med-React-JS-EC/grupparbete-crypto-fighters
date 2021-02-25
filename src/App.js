@@ -15,10 +15,10 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <Switch>
-          <Route path="/start" component={ Start } exact />
+          <Route path="/" component={ Start } exact />
           <Route path="/about" component={ About } />
           <Route path="/cart" component={ Cart } />
-          <Route path="/" component={ Menu } />
+          <Route path="/menu" component={ Menu } />
           <Route path="/nav" component={ Nav} />
           <Route path="/status" component={ Status } /> 
         </Switch>
