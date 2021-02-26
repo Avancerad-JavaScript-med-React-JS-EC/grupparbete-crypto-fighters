@@ -14,7 +14,7 @@ export default function Start(){
     const [redirect , setRedirect] =  useState(false)
 
 useEffect(() => {
-    setTimeout(() => setRedirect(true), 1500)
+    setTimeout(() => setRedirect(true), 3000)
 }, [])
 
     return (
