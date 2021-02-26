@@ -43,7 +43,7 @@ export default function Status(){
             </div>
             </div>
             )}
-            <button onClick={ onClickHandler }>Ok,cool!</button>
+            <button className="status-btn" onClick={ onClickHandler }>Ok,cool!</button>
         </div>
     )
 }
