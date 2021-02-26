@@ -1,16 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import { Redirect } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Redirect } from "react-router-dom";
 
+import "../css/start.css";
+import airbean from "../assets/graphics/airbean-landing.svg";
+import introleft from "../assets/graphics/intro-graphic-left.svg";
+import introright from "../assets/graphics/intro-graphic-right.svg";
+import loader from "../assets/graphics/loader.png";
 
-import '../css/start.css';
-import airbean from '../assets/graphics/airbean-landing.svg';
-import introleft from '../assets/graphics/intro-graphic-left.svg';
-import introright from '../assets/graphics/intro-graphic-right.svg';
-import loader from '../assets/graphics/loader.png';
-
-
-export default function Start(){
-
+export default function Start() {
     const [redirect , setRedirect] =  useState(false)
 
 useEffect(() => {
