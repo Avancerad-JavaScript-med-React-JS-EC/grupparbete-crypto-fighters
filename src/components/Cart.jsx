@@ -16,7 +16,7 @@ export default function Cart(props) {
         </div>
       </button>
       <div className={`popup-menu ${isOpen ? "shown" : " "}`}>
-        <div>{cartItem.map(item => <CartItem key={item.item.id} title={item.item.title} price={item.item.price} quantity={item.itemQuantity}/>)}</div>
+        <div>{cartItem.map(item => <CartItem key={item.item.id}  item={item.item} quantity={item.itemQuantity} />)}</div>
         <button>Pay</button>
       </div>
     </div>
