@@ -1,8 +1,3 @@
-.navBar {
-	width: 375px;
-	height: 667px;
-	color: red;
-}
 .nav {
 	height: 50px;
 	width: 50px;
@@ -42,10 +37,9 @@
 	width: 375px;
 	height: 667px;
 	background-color: #2F2926;
-	position: relative;
 	max-width: 375px;
 	max-height: 667px;
-	z-index: 2;
+	z-index: 3;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
