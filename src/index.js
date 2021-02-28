@@ -12,6 +12,7 @@ import App from './App';
 import {cartReducer} from './reducers/cartReducer';
 import {orderReducer} from './reducers/orderReducer';
 import {productsReducer} from './reducers/productsReducer';
+import {loadFromLocalStorage, saveToLocalStorage} from './components/localStorage';
 
 
 const reducer = combineReducers({
@@ -20,7 +21,13 @@ const reducer = combineReducers({
   'productsItems': productsReducer
 })
 
-const store = createStore(reducer, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+const persistedState = loadFromLocalStorage();
+
+const store = createStore(reducer, persistedState, compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+
+store.subscribe(() => {
+  saveToLocalStorage({cart : store.getState().cart});
+});
 
 ReactDOM.render(
   <React.StrictMode>
