@@ -1,8 +1,3 @@
-.navBar {
-	width: 375px;
-	height: 667px;
-	color: red;
-}
 .nav {
 	height: 50px;
 	width: 50px;
@@ -26,7 +21,7 @@
 	background: url('../assets/graphics/close.svg') no-repeat;
 	height: 20px;
 	width: 26px;
-	margin: 15px
+	margin: 15px;
 }
 .navContent {
 	display: none;
@@ -41,7 +36,7 @@
 	position: absolute;
 	width: 375px;
 	height: 667px;
-	background-color: #2F2926;
+	background-color: #2f2926;
 	position: relative;
 	max-width: 375px;
 	max-height: 667px;
@@ -52,17 +47,16 @@
 	justify-content: center;
 }
 .linkItem {
-    margin: 1rem;
+	margin: 1rem;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
-    font-weight: bold;
-    font-family: 'PT Serif', serif;
-    font-size: 32px;
-
+	font-weight: bold;
+	font-family: 'PT Serif', serif;
+	font-size: 32px;
 }
 
-.underline{
-    width: 48px;
-    height: 1px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);;
+.underline {
+	width: 48px;
+	height: 1px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
