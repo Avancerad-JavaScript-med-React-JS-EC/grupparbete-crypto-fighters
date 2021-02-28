@@ -5,15 +5,11 @@ import { CartItem } from "./CartItem";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../actions/addToCart";
 
-
-export default function Cart({selectedItems, totalCost}) {
-
+export default function Cart({ selectedItems, totalCost }) {
   const cartItems = useSelector((state) => state.cart.items);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = (e) => setIsOpen(!isOpen);
   const dispatch = useDispatch();
-
- 
 
   return (
     <div className="cart-wrap">
@@ -23,7 +19,15 @@ export default function Cart({selectedItems, totalCost}) {
         </div>
       </button>
       <div className={`popup-menu ${isOpen ? "shown" : " "}`}>
-        <div>{cartItems.map(item => <CartItem key={item.item.id} item={item.item} quantity={item.itemQuantity} />)}</div>
+        <div>
+          {cartItems.map((item) => (
+            <CartItem
+              key={item.item.id}
+              item={item.item}
+              quantity={item.itemQuantity}
+            />
+          ))}
+        </div>
         <div>{totalCost}</div>
         <button>Pay</button>
         <button onClick={() => dispatch(clearCart())}>Empty the cart</button>

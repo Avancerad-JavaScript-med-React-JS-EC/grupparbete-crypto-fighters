@@ -8,7 +8,6 @@ export default function Nav() {
 	const handleClick = () => setActive(!active);
 	return (
 		<nav className="navBar">
-			<div className="">
 				<button type="button " className="nav" onClick={handleClick}>
 					<div className={!active ? 'navIcon' : 'close'}></div>
 				</button>
@@ -27,7 +26,6 @@ export default function Nav() {
 						<div className={!active ? 'navIcon' : 'close'}></div>
 					</button>
 				</div>
-			</div>
 		</nav>
 	);
 };
