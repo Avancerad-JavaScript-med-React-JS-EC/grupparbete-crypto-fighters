@@ -32,7 +32,7 @@
 	align-content: center;
 	justify-content: center;
 }
-.beanInfo{
+.beanInfo {
 	height: 28rem;
 	margin-left: 15px;
 	width: 311px;
@@ -46,7 +46,6 @@
 }
 .vdContent {
 	text-align: center;
-
 }
 .vdName {
 	font-family: 'PT Serif', serif;
@@ -55,15 +54,16 @@
 }
 .vdInfo {
 	font-family: 'PT Serif', serif;
-	font-size: .7rem;
+	font-size: 0.7rem;
 	margin-bottom: 18px;
 }
 .text {
+	font-family: 'Work Sans', sans-serif;
 	line-height: 14px;
 	font-size: 12px;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
 }
-.strong{
+.strong {
 	font-weight: 600;
 	font-family: 'PT Serif', serif;
 	font-size: 14px;
