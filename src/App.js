@@ -5,7 +5,7 @@ import './App.css';
 import About from './components/About';
 import Cart from './components/Cart';
 import Menu from './components/Menu';
-import Nav from './components/Nav';
+// import Nav from './components/Nav';
 import Start from './components/Start';
 import Status from './components/Status';
 
@@ -19,7 +19,7 @@ function App() {
           <Route path="/about" component={ About } />
           <Route path="/cart" component={ Cart } />
           <Route path="/menu" component={ Menu } />
-          <Route path="/nav" component={ Nav} />
+          {/* <Route path="/nav" component={ Nav} /> */}
           <Route path="/status" component={ Status } /> 
         </Switch>
       </div>
