@@ -1,13 +1,33 @@
-export const addToCart = (item, itemQuantity = 1) => {
+export const addItem = (item, itemQuantity = 1) => {
   return {
-    type: "ADD_TO_CART",
-    payload: { item, itemQuantity },
+    type: "ADD_ITEM",
+    payload: { item, itemQuantity }
   };
 };
 
-export function updateItemQuantity({ id, itemQuantity }) {
+export const decrementQuantity = (item, itemQuantity) => {
   return {
-    type: "UPDATE_ITEM_UNITS",
-    payload: { id, itemQuantity },
+    type: "DECREMENT_QUANTITY",
+    payload: {item, itemQuantity}
   };
 }
+
+export const deleteItem = id => {
+  return {
+    type: 'DELETE_ITEM',
+    payload: {id}
+  }
+};
+
+export const updatePrice = () => {
+    return {
+      type: 'UPDATE_PRICE'
+    };
+  };
+
+  export const clearCart = () => {
+    return {
+      type: 'CLEAR_CART'
+    };
+  };
+ 

@@ -6,11 +6,13 @@ import Cart from "./Cart";
 import { useDispatch } from "react-redux";
 import { fetchProducts } from "../actions/fetchProducts";
 import { useSelector } from "react-redux";
-import { addToCart } from "../actions/addToCart";
+import { addItem } from "../actions/addToCart";
+import { updatePrice } from "../actions/addToCart";
 
 const Menu = () => {
   const menuItem = useSelector((state) => state.productsItems.productsItems);
   const quantity = useSelector((state) => state.cart.quantity);
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
 
   const dispatch = useDispatch();
 
@@ -19,7 +21,8 @@ const Menu = () => {
   }, []);
 
   const handleSelectProduct = (product) => {
-    dispatch(addToCart(product));
+    dispatch(addItem(product));
+    dispatch(updatePrice());
   };
 
   return (
@@ -28,6 +31,7 @@ const Menu = () => {
         <Nav />
         <Cart
           selectedItems={quantity}
+          totalCost={totalPrice}
         />
       </div>
       <div className="menu">
