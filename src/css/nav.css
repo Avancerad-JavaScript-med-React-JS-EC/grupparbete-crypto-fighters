@@ -21,7 +21,7 @@
 	background: url('../assets/graphics/close.svg') no-repeat;
 	height: 20px;
 	width: 26px;
-	margin: 15px
+	margin: 15px;
 }
 .navContent {
 	display: none;
@@ -46,17 +46,16 @@
 	justify-content: center;
 }
 .linkItem {
-    margin: 1rem;
+	margin: 1rem;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
-    font-weight: bold;
-    font-family: 'PT Serif', serif;
-    font-size: 32px;
-
+	font-weight: bold;
+	font-family: 'PT Serif', serif;
+	font-size: 32px;
 }
 
-.underline{
-    width: 48px;
-    height: 1px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);;
+.underline {
+	width: 48px;
+	height: 1px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
