@@ -1,11 +1,17 @@
+
+
 const NavItems = [
     {
+        id: '1',
         item: 'Home',
-        url:'/menu'
+        url: '/menu'
     },
     {
+        id: '2',
         item: 'Vårt Kaffe',
-        url:'/about'
+        url: '/about'
     },
 ]
+
+
 export default NavItems;

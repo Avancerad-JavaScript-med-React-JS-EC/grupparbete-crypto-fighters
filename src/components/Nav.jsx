@@ -15,7 +15,7 @@ export default function Nav() {
 					{NavItems.map((items, index) => {
 						return (
 							<>
-								<Link className="linkItem" onClick={handleClick} to={items.url} key={index}>
+								<Link className="linkItem" onClick={handleClick} to={items.url} key={index.id}>
 									{items.item}
 								</Link>
 								<div className="underline"></div>
