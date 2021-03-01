@@ -4,12 +4,20 @@ import { useSelector } from "react-redux";
 import { CartItem } from "./CartItem";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../actions/addToCart";
+import { setOrder } from "../actions/setOrder";
+import { useHistory } from "react-router-dom";
 
 export default function Cart({ selectedItems, totalCost }) {
-  const cartItems = useSelector((state) => state.cart.items);
+  const cartItems = useSelector((state) => state.cart);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = (e) => setIsOpen(!isOpen);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  const takeOrderClick = () => {
+    dispatch(setOrder(cartItems));
+    history.push("/status")
+  }
  
 
   return (
@@ -22,7 +30,7 @@ export default function Cart({ selectedItems, totalCost }) {
       <div className={`popup-menu ${isOpen ? "shown" : " "}`}>
       <div onClick={() => setIsOpen(false)}>X</div>
         <div>
-          {cartItems.map((item) => (
+          {cartItems.items.map((item) => (
             <CartItem
               key={item.item.id}
               item={item.item}
@@ -31,7 +39,7 @@ export default function Cart({ selectedItems, totalCost }) {
           ))}
         </div>
         <div>{totalCost}</div>
-        <button>Pay</button>
+        <button onClick={takeOrderClick}>Pay</button>
         <button onClick={() => dispatch(clearCart())}>Empty the cart</button>
       </div>
     </div>
