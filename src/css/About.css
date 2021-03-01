@@ -60,13 +60,13 @@
 .text {
 	font-family: 'Work Sans', sans-serif;
 	line-height: 14px;
-	font-size: 12px;
+	font-size: 11px;
 	margin-bottom: 0.5rem;
 }
 .strong {
 	font-weight: 600;
 	font-family: 'Work Sans', sans-serif;
-	font-size: 14px;
+	font-size: 12px;
 }
 .img {
 	height: 60px;
