@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "../css/navCart.css";
 import { useSelector } from "react-redux";
 import { CartItem } from "./CartItem";
@@ -10,6 +10,7 @@ export default function Cart({ selectedItems, totalCost }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = (e) => setIsOpen(!isOpen);
   const dispatch = useDispatch();
+ 
 
   return (
     <div className="cart-wrap">
@@ -19,6 +20,7 @@ export default function Cart({ selectedItems, totalCost }) {
         </div>
       </button>
       <div className={`popup-menu ${isOpen ? "shown" : " "}`}>
+      <div onClick={() => setIsOpen(false)}>X</div>
         <div>
           {cartItems.map((item) => (
             <CartItem

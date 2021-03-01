@@ -12,7 +12,7 @@ export default function Nav() {
 					<div className={!active ? 'navIcon' : 'close'}></div>
 				</button>
 				<div className={!active ? 'navContent' : 'navContentActive'}>
-					{NavItems.map((items, index) => {
+					{NavItems.map((items) => {
 						return (
 							<>
 								<Link className="linkItem" onClick={handleClick} to={items.url} key={index.id}>

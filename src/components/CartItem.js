@@ -19,11 +19,10 @@ export const CartItem = ({ item, quantity }) => {
   const decrement = (id) => {
     if (quantity > 1) {
       dispatch(decrementQuantity(item));
-      dispatch(updatePrice());
     } else {
       dispatch(deleteItem(id));
-      dispatch(updatePrice());
     }
+    dispatch(updatePrice());
   };
 
   return (
