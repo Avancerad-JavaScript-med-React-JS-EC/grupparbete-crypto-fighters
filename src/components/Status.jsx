@@ -1,34 +1,45 @@
 import React, { useState, useEffect } from "react";
 import "../css/status.css";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import drone from "../assets/graphics/drone.svg";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../actions/addToCart";
 
 export default function Status() {
-  const [status, setStatus] = useState([]);
+  const [orderStatus, setOrderStatus] = useState([]);
+  const dispatch = useDispatch();
+  const order = useSelector(state => state.order);
+
+  
   const history = useHistory();
   const options = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+        order
+      }),
   };
 
   const onClickHandler = () => {
     history.push("/menu");
+    dispatch(clearCart())
   };
 
   useEffect(async () => {
     const response = await fetch("http://localhost:5000/api/beans", options);
     const data = await response.json();
-    setStatus([
+    setOrderStatus([
       {
         eta: data.eta,
-        orderno: data.orderNr,
+        orderno: data.orderNr
       },
     ]);
   }, []);
 
   return (
     <div className="status-page">
-      {status.map((stat) => (
+      {orderStatus.map((stat) => (
         <div key="wrapper">
           <div key="order" className="ordernumber">
             <p>{`Ordernummer #${stat.orderno}`}</p>
