@@ -23,29 +23,30 @@
 }
 .content {
 	margin-bottom: 2rem;
-	padding: 1rem;
-	height: 41.6875rem;
-	width: 375px;
-	max-height: 667px;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	justify-content: center;
+    padding: 1rem;
+    height: 1000px;
+    width: 375px;
+    max-height: 667px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    overflow: scroll;
 }
 .beanInfo {
-	height: 28rem;
 	margin-left: 15px;
-	width: 311px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+    width: 311px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .aboutHeader {
-	margin: 70px 0px 10px 0px;
+	margin: 100px 0px 10px 0px;
 	font-family: 'PT Serif', serif;
 }
 .vdContent {
 	text-align: center;
+	margin-bottom: 2rem;
 }
 .vdName {
 	font-family: 'PT Serif', serif;
@@ -59,8 +60,8 @@
 }
 .text {
 	font-family: 'Work Sans', sans-serif;
-	line-height: 14px;
-	font-size: 11px;
+	line-height: 17px;
+	font-size: 12px;
 	margin-bottom: 0.5rem;
 }
 .strong {

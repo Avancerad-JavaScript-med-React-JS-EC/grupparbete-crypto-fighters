@@ -11,6 +11,10 @@
     cursor: pointer;
 }
 
+.navCart:focus{
+  outline: none;
+}
+
 .navCartIcon{
     background: url("../assets/graphics/bag.svg") no-repeat;
     height: 22px;
@@ -31,6 +35,11 @@
     background-color: goldenrod;
     color: rgb(255, 255, 255);
     font-weight: 600;
+}
+
+.cart-control{
+  display: flex;
+  justify-content: space-between;
 }
 
 .popup-menu {
@@ -62,8 +71,7 @@
   .popup-menu.shown {
     transform: scale(1);
   }
-
-  .overlay{}
+  
 
   .overlay::after{
     content: "";
@@ -124,3 +132,69 @@
       opacity:1;
     }
   }
+
+  .cart-title h1{
+    font-size: 1.7rem;
+    text-align: center;
+    white-space: nowrap;
+    color: #2f2926;
+    margin-bottom: 2rem;
+  }
+
+  .close-popup-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+    background-color: #d41c1c;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: rgb(255, 247, 235);
+    font-size: 1.8rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transform: rotate(225deg);
+  }
+
+  .emptyCart{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .cart-btn{
+    background-color: #2f2926;
+    color: rgb(255, 247, 235);
+    padding: .4em 1.5em;
+    border-radius: 2em;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 1rem auto;
+    display: flex;
+  }
+
+  .cart-btn:focus{
+    outline: none;
+  }
+
+  .totalCost{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .t-cost-p{
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .totalText p{
+    font-family: "Work Sans", sans-serif;
+    font-size: .8rem;
+  }
+  
