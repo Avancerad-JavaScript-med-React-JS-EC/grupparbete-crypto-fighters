@@ -38,7 +38,52 @@ height: 100%;
        justify-content: space-between;
        align-items: center;
        width: 100%;
-       padding: 0 2rem;
+       padding: .8rem 2rem;
    }
 
-   
+ 
+   .product-grid .add{
+    background-color: #2F2926;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 247, 235);
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+   }
+
+   .product-grid .add:focus {outline:0;}
+
+   .product-grid .title{
+       font-size: 1.3rem;
+       white-space: nowrap;
+       border-bottom: 1px dotted #2F2926;
+   }
+
+
+.product-grid .desc{
+    font-size: .7rem;
+    white-space: nowrap;
+}
+
+.product-grid .price{
+    font-size: 1.3rem;
+    align-self: flex-start;
+}
+
+.product-grid .g-center{
+    width: 60%;
+}
+
+.menu-content h1{
+    margin-bottom: 1rem;
+}
+
+.dotted-Line{
+    border-bottom: 1px dotted #2F2926;
+    min-width: 15% ;
+}
+
