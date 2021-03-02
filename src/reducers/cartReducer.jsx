@@ -13,13 +13,13 @@ export function cartReducer(state = initialState, action) {
       return {
         ...state,
         items: !isAlreadyAdded
-          ? [action.payload, ...state.items]
+          ? [...state.items, action.payload]
           : state.items.map((item) =>
               item.item.id === action.payload.item.id
                 ? { ...item, itemQuantity: ++item.itemQuantity }
                 : item
             ),
-        quantity: state.quantity + 1,
+        quantity: state.quantity + 1
       };
 
     case "UPDATE_PRICE":
@@ -39,21 +39,21 @@ export function cartReducer(state = initialState, action) {
             ? { ...item, itemQuantity: --item.itemQuantity }
             : item
         ),
-        quantity: state.quantity - 1,
+        quantity: state.quantity - 1
       };
 
     case "DELETE_ITEM":
       return {
         ...state,
         items: state.items.filter((item) => item.item.id !== action.payload.id),
-        quantity: state.quantity - 1,
+        quantity: state.quantity - 1
       };
 
     case "CLEAR_CART":
       return {
         items: [],
         quantity: 0,
-        totalPrice: 0,
+        totalPrice: 0
       };
 
     default:

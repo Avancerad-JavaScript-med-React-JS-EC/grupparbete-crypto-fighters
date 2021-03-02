@@ -4,5 +4,3 @@ export const setOrder = (order) => {
         payload: order
     }
 }
-
-export default setOrder;

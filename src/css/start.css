@@ -6,6 +6,8 @@
   width: 375px;
   height: 667px;
 }
+
+
 .img-content {
   display: flex;
   flex-direction: row;

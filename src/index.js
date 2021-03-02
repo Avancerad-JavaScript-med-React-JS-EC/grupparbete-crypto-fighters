@@ -10,6 +10,7 @@ import './index.css';
 
 import App from './App';
 import {cartReducer} from './reducers/cartReducer';
+import {navReducer} from './reducers/navReducer';
 import {orderReducer} from './reducers/orderReducer';
 import {productsReducer} from './reducers/productsReducer';
 import {loadFromLocalStorage, saveToLocalStorage} from './components/localStorage';
@@ -18,7 +19,8 @@ import {loadFromLocalStorage, saveToLocalStorage} from './components/localStorag
 const reducer = combineReducers({
   'cart': cartReducer,
   'order': orderReducer,
-  'productsItems': productsReducer
+  'productsItems': productsReducer,
+  'nav': navReducer
 })
 
 const persistedState = loadFromLocalStorage();

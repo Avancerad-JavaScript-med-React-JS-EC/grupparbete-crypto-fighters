@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/status.css";
+import loader from "../assets/graphics/loader.png";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import drone from "../assets/graphics/drone.svg";
@@ -8,6 +9,7 @@ import { clearCart } from "../actions/addToCart";
 
 export default function Status() {
   const [orderStatus, setOrderStatus] = useState([]);
+  const [loaderData, setLoaderDate] = useState(true);
   const dispatch = useDispatch();
   const order = useSelector(state => state.order);
 
@@ -35,11 +37,13 @@ export default function Status() {
         orderno: data.orderNr
       },
     ]);
+     setLoaderDate(false)
   }, []);
 
   return (
     <div className="status-page">
-      {orderStatus.map((stat) => (
+    { loaderData ? <img className="loaderStatus" src={loader}></img> 
+      : orderStatus.map((stat) => (
         <div key="wrapper">
           <div key="order" className="ordernumber">
             <p>{`Ordernummer #${stat.orderno}`}</p>
@@ -54,7 +58,8 @@ export default function Status() {
             <p>{`${stat.eta} minuter`}</p>
           </div>
         </div>
-      ))}
+      ))
+    }
       <button className="status-btn" onClick={onClickHandler}>
         Ok,cool!
       </button>

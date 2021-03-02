@@ -27,18 +27,17 @@ export const CartItem = ({ item, quantity }) => {
 
   return (
     <div className="cartItem-wrap">
-      <div>
-        <div>{item.title}</div>
-        <div>{item.price}</div>
+      <div className="item-detials">
+        <div className="item-title">{item.title}</div>
+        <div className="item-price">{item.price} kr</div>
       </div>
-      <div>
-        <button className="btn subtract" onClick={() => decrement(item.id)}>
-          -
-        </button>
-        <div>{quantity}</div>
-        <button className="btn add" onClick={() => increment()}>
-          +
-        </button>
+      <div className="qyn-controle">
+        <button className="btn arrow add" onClick={() => increment()}></button>
+        <div className="item-qyn">{quantity}</div>
+        <button
+          className="btn arrow subtract"
+          onClick={() => decrement(item.id)}
+        ></button>
       </div>
     </div>
   );
