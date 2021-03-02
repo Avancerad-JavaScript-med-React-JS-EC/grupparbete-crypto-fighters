@@ -10,10 +10,10 @@ import { addItem } from "../actions/addToCart";
 import { updatePrice } from "../actions/addToCart";
 
 const Menu = () => {
+
   const menuItem = useSelector((state) => state.productsItems.productsItems);
   const quantity = useSelector((state) => state.cart.quantity);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
