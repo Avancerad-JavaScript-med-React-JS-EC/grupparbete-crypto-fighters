@@ -52,10 +52,12 @@
 	font-weight: bold;
 	font-family: 'PT Serif', serif;
 	font-size: 32px;
+	display: block;
 }
 
 .underline {
 	width: 48px;
 	height: 1px;
 	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	margin: 0 auto;
 }
