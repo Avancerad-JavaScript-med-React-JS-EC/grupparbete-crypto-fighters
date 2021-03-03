@@ -23,7 +23,7 @@ export default function Cart({ selectedItems, totalCost }) {
 
 	const takeOrderClick = () => {
 		if (cartItems.items.length < 1) {
-			alert('Your cart is empty');
+      alert('Your cart is empty, our Drone is not for sale!');
 		} else {
 			dispatch(setOrder(cartItems));
 			history.push('/status');
