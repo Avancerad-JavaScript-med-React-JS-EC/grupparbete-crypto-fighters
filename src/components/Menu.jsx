@@ -30,7 +30,7 @@ const Menu = () => {
       <div className="navigation">
         <Nav />
         <Cart
-          selectedItems={quantity}
+          selectedItemsQyn={quantity}
           totalCost={totalPrice}
         />
       </div>

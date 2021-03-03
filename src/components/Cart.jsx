@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import trash from '../assets/graphics/trash.svg';
 import { toggleAction } from '../actions/navAction';
 
-export default function Cart({ selectedItems, totalCost }) {
+export default function Cart({ selectedItemsQyn, totalCost }) {
 	const cartItems = useSelector((state) => state.cart);
 	const navToggle = useSelector((state) => state.nav.isOpen);
 	const dispatch = useDispatch();
@@ -35,7 +35,7 @@ export default function Cart({ selectedItems, totalCost }) {
 		<div ref={overlayNode} className="cart-wrap">
 			<button className="navCart" onClick={toggle}>
 				<div className="navCartIcon">
-					<span className="cartCount">{selectedItems}</span>
+					<span className="cartCount">{selectedItemsQyn}</span>
 				</div>
 			</button>
 			<div className={`popup-menu ${navToggle ? 'shown' : ' '}`}>
