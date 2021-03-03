@@ -2,12 +2,12 @@
 
 const NavItems = [
     {
-        id: '1',
-        item: 'Home',
+        id: 1,
+        item: 'Meny',
         url: '/menu'
     },
     {
-        id: '2',
+        id: 2,
         item: 'Vårt Kaffe',
         url: '/about'
     },

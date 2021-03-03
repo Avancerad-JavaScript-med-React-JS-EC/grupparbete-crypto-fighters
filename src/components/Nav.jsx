@@ -33,17 +33,16 @@ export default function Nav() {
       <div className={!active ? "navContent" : "navContentActive"}>
         {NavItems.map((items) => {
           return (
-            <>
+            <div key={items.id}>
               <Link
                 className="linkItem"
                 onClick={handleClick}
                 to={items.url}
-                key={items.id}
               >
                 {items.item}
               </Link>
               <div className="underline"></div>
-            </>
+            </div>
           );
         })}
         <button type="button " className="nav" onClick={handleClick}>
