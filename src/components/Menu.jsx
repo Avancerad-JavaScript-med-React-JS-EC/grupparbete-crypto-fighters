@@ -11,7 +11,7 @@ import { updatePrice } from "../actions/addToCart";
 
 const Menu = () => {
 
-  const menuItem = useSelector((state) => state.productsItems.productsItems);
+  const menuItem = useSelector((state) => state.productsItems);
   const quantity = useSelector((state) => state.cart.quantity);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const dispatch = useDispatch();

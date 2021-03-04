@@ -5,9 +5,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from "redux-thunk";
 import reportWebVitals from './reportWebVitals';
-
 import './index.css';
-
 import App from './App';
 import {cartReducer} from './reducers/cartReducer';
 import {navReducer} from './reducers/navReducer';
