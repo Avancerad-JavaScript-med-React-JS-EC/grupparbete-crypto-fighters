@@ -11,7 +11,7 @@ import { updatePrice } from "../actions/addToCart";
 
 const Menu = () => {
 
-  const menuItem = useSelector((state) => state.productsItems.productsItems);
+  const menuItem = useSelector((state) => state.productsItems);
   const quantity = useSelector((state) => state.cart.quantity);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const Menu = () => {
       <div className="navigation">
         <Nav />
         <Cart
-          selectedItems={quantity}
+          selectedItemsQyn={quantity}
           totalCost={totalPrice}
         />
       </div>
